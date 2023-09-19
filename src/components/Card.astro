@@ -1,6 +1,9 @@
 ---
+import type { ImageMetadata } from "astro"
+import { Image } from "astro:assets"
+
 interface Props {
-  imgURL: string
+  imgURL: ImageMetadata
   title: string
   subtitle: string
 }
@@ -8,7 +11,7 @@ interface Props {
 const { imgURL, title, subtitle } = Astro.props
 ---
 <div class="card-container">
-  <img src={imgURL} alt="card image" />
+  <Image src={imgURL} alt="card image" width={295} height={295}/>
   <h5>{title}</h5>
   <p>{subtitle}</p>
 </div>
@@ -24,7 +27,6 @@ const { imgURL, title, subtitle } = Astro.props
   }
 
   .card-container > img {
-    width: 100%;
     border-radius: 10px;
   }
 
