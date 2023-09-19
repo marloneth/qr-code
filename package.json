@@ -11,5 +11,8 @@
   },
   "dependencies": {
     "astro": "^3.1.0"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.4.10"
   }
 }
